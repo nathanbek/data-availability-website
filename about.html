@@ -3,35 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About QIceRadar</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="bg-primary text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1>About</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-                    <li class="nav-item"><a href="maps.html" class="nav-link text-white">Maps</a></li>
-                    <li class="nav-item"><a href="csvs.html" class="nav-link text-white">CSV Data</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link text-white">About</a></li>
-                </ul>
-            </nav>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>About QIceRadar</h1>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                        <li class="nav-item"><a href="maps.html" class="nav-link text-white">Maps</a></li>
+                        <li class="nav-item"><a href="csvs.html" class="nav-link text-white">CSV Data</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link text-white">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main class="container my-5">
-        <section class="about">
-            <h1 class="mb-4">About QIceRadar</h1>
+        <section class="about p-4 bg-white shadow rounded">
+            <h1>About QIceRadar</h1>
             <p>The QIceRadar project aims to visualize and provide access to the vast amounts of data collected by various institutions on Antarctic research. Despite the wealth of data, accessibility and usability remain challenges. By showcasing the data availability and statistics, we strive to make this information more fair and accessible to researchers and the public alike.</p>
-            <h2 class="mt-4">Importance of Data Availability</h2>
+            <h2>Importance of Data Availability</h2>
             <p>Data is crucial for advancing scientific research. The lack of accessible data can hinder progress and limit the potential for new discoveries. Our project highlights the gaps in data availability and encourages institutions to share their data more openly.</p>
-            <h2 class="mt-4">Making Data More Fair</h2>
+            <h2>Making Data More Fair</h2>
             <p>We believe that data should be FAIR: Findable, Accessible, Interoperable, and Reusable. By providing a platform that aggregates and visualizes data from different institutions, we aim to promote these principles and facilitate better research outcomes.</p>
+            <h2>Highlighting Data Sharing</h2>
+            <p>QIceRadar specifically showcases which institutions are making their data public by:</p>
+            <ul>
+                <li><strong>Data Availability Maps:</strong> Visualizing the geographic areas where data from different institutions is available.</li>
+                <li><strong>Institution-Specific Layers:</strong> Displaying data from each institution separately, highlighting those that contribute openly.</li>
+                <li><strong>Comparative Analysis:</strong> Providing statistics and visual comparisons of data availability between institutions, promoting transparency and encouraging more data sharing.</li>
+            </ul>
+            <h2>Long-Term Implications</h2>
+            <ul>
+                <li><strong>Enhanced Collaboration:</strong> Easier access to data fosters global research collaboration.</li>
+                <li><strong>Data-Driven Decision Making:</strong> Policymakers and organizations can make informed decisions based on robust datasets.</li>
+                <li><strong>Educational Resource:</strong> Serves as a valuable tool for educators and students, promoting data literacy.</li>
+                <li><strong>Encouraging Open Science:</strong> Sets a precedent for open data in other scientific fields.</li>
+                <li><strong>Innovation and Technological Advancement:</strong> Accessible data accelerates innovation and new discoveries.</li>
+            </ul>
+            <h2>Technology Stack Used</h2>
+            <h3>Data Storage and Management:</h3>
+            <ul>
+                <li><strong>GeoPackage, PostgreSQL with PostGIS:</strong> Efficient storage and querying of geospatial data.</li>
+            </ul>
+            <h3>Data Processing:</h3>
+            <ul>
+                <li><strong>Python:</strong> Using Pandas, GeoPandas, and NumPy for data manipulation.</li>
+                <li><strong>GDAL/OGR:</strong> For data conversion and preprocessing.</li>
+            </ul>
+            <h3>Visualization:</h3>
+            <ul>
+                <li><strong>Matplotlib and Plotly:</strong> For static and interactive visualizations.</li>
+                <li><strong>QGIS:</strong> For creating maps and visualizing geospatial data.</li>
+            </ul>
+            <h3>User Interface and Experience:</h3>
+            <ul>
+                <li><strong>HTML, CSS, JavaScript, Bootstrap:</strong> For a responsive and user-friendly interface.</li>
+            </ul>
+            <h3>Version Control and Collaboration:</h3>
+            <ul>
+                <li><strong>Git and GitHub:</strong> For version control and team collaboration.</li>
+            </ul>
         </section>
     </main>
-    <footer class="bg-primary text-white text-center py-2">
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; University of Washington - Applied Physics Laboratory 2024</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

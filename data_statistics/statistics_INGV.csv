@@ -1,7 +1,7 @@
 institution,campaign,total_distance_km,available_distance_km,availability
-INGV,1997_ITASE,716863.43,0.0,
-INGV,1997_Talos-Dome,9781.05,0.0,
-INGV,1999_Talos-Dome,26303.43,0.0,
-INGV,2001_Talos-Dome,8654.89,0.0,
-INGV,2003_Talos-Dome,48161.61,0.0,
-INGV,Total,809764.4100000001,0.0,N/A
+INGV,1997_ITASE,"716,863",0,
+INGV,1997_Talos-Dome,"9,781",0,
+INGV,1999_Talos-Dome,"26,303",0,
+INGV,2001_Talos-Dome,"8,655",0,
+INGV,2003_Talos-Dome,"48,162",0,
+INGV,Total,"809,764",0,N/A

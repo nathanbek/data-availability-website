@@ -1,5 +1,5 @@
 institution,campaign,total_distance_km,available_distance_km,availability
-KOPRI,2017_KRT1,7316.65,0.0,
-KOPRI,2018_KRT2,2333.34,0.0,
-KOPRI,KRT1,4688.96,4688.96,
-KOPRI,Total,14338.95,4688.96,N/A
+KOPRI,2017_KRT1,"7,317",0,
+KOPRI,2018_KRT2,"2,333",0,
+KOPRI,KRT1,"4,693","4,693",
+KOPRI,Total,"14,343","4,693",N/A

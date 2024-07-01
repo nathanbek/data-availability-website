@@ -1,7 +1,7 @@
 institution,campaign,total_distance_km,available_distance_km,availability
-STOLAF,1994_Siple-Dome,159.25,0.0,
-STOLAF,2001_ITASE-Byrd-Ellsworth,985.59,0.0,
-STOLAF,2001_ITASE-Ellsworth,141.86,0.0,
-STOLAF,2002_ITASE-Byrd-South-Pole,1384.45,0.0,
-STOLAF,2002_ITASE-Hercules-Dome,110.68,0.0,
-STOLAF,Total,2781.8300000000004,0.0,N/A
+STOLAF,1994_Siple-Dome,159,0,
+STOLAF,2001_ITASE-Byrd-Ellsworth,986,0,
+STOLAF,2001_ITASE-Ellsworth,142,0,
+STOLAF,2002_ITASE-Byrd-South-Pole,"1,384",0,
+STOLAF,2002_ITASE-Hercules-Dome,111,0,
+STOLAF,Total,"2,782",0,N/A

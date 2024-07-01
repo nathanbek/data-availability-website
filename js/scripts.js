@@ -69,7 +69,7 @@ function convertCSVToHTMLTable(csv, highlightColumn) {
     let html = '<table class="table table-striped"><thead><tr>';
 
     // Add headers
-    const headers = rows[0].split(',');
+    const headers = parseCSVLine(rows[0]);
     headers.forEach(header => {
         html += `<th>${header.trim()}</th>`;
     });
@@ -77,7 +77,7 @@ function convertCSVToHTMLTable(csv, highlightColumn) {
 
     // Add rows
     for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].split(',');
+        const cells = parseCSVLine(rows[i]);
         html += '<tr>';
         cells.forEach((cell, index) => {
             if (highlightColumn && headers[index].trim() === highlightColumn && parseFloat(cell.trim()) === 0.0) {
@@ -90,4 +90,9 @@ function convertCSVToHTMLTable(csv, highlightColumn) {
     }
     html += '</tbody></table>';
     return html;
+}
+
+function parseCSVLine(line) {
+    const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
+    return line.split(regex).map(cell => cell.replace(/(^"|"$)/g, ''));
 }
