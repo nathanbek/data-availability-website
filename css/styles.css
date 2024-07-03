@@ -270,3 +270,106 @@ a:hover {
     }
 }
 
+/* Hamburger Button Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.hamburger.active .bar:first-child {
+    transform: rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* Navbar styles for mobile */
+#navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Show nav when hamburger is active */
+#navbar.active {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #navbar ul {
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

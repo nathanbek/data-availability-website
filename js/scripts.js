@@ -96,3 +96,15 @@ function parseCSVLine(line) {
     const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
     return line.split(regex).map(cell => cell.replace(/(^"|"$)/g, ''));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navbar = document.getElementById('navbar');
+
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        navbar.classList.toggle('active');
+    });
+});
+
+
