@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - QIceRadar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>Getting Started</h1>
+                <button class="hamburger" id="hamburger-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav id="navbar" class="nav-desktop">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                        <li class="nav-item"><a href="maps.html" class="nav-link text-white">Maps</a></li>
+                        <li class="nav-item"><a href="csvs.html" class="nav-link text-white">CSV Data</a></li>
+                        <li class="nav-item"><a href="instructions.html" class="nav-link text-white">Getting Started</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link text-white">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section class="about p-4 bg-white shadow rounded">
+            <h1>Getting Started with QIceRadar</h1>
+            <p>Welcome to QIceRadar! This page will guide you through the initial setup and provide you with resources to help you get started with visualizing and analyzing Antarctic radar data.</p>
+
+            <h2>Installation Instructions</h2>
+            <p>Follow these steps to install QIceRadar on your system:</p>
+            <ol>
+                <li>Download the latest version of QIceRadar from the <a href="https://github.com/QIceRadar/QIceRadar/releases">GitHub releases page</a>.</li>
+                <li>Extract the downloaded files to a directory of your choice.</li>
+                <li>Open a terminal and navigate to the extracted directory.</li>
+                <li>Run the following command to install the required dependencies:
+                    <pre><code>pip install -r requirements.txt</code></pre>
+                </li>
+                <li>Run the following command to start QIceRadar:
+                    <pre><code>python main.py</code></pre>
+                </li>
+            </ol>
+
+            <h2>Video Tutorials</h2>
+            <p>Check out this video tutorial to help you get started with QIceRadar:</p>
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/u1sTNQSCQc4" allowfullscreen></iframe>
+            </div>
+
+            <h2>Data Availability</h2>
+            <p>The table below shows the availability of data and the supported features within the QIceRadar application:</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Institution</th>
+                        <th>Campaign</th>
+                        <th>Data Type</th>
+                        <th>Availability</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>British Antarctic Survey (BAS)</td>
+                        <td>AGAP</td>
+                        <td>Radar Data</td>
+                        <td>Available</td>
+                        <td>Supports basic visualization</td>
+                    </tr>
+                    <tr>
+                        <td>British Antarctic Survey (BAS)</td>
+                        <td>BBAS</td>
+                        <td>Elevation Data</td>
+                        <td>Available</td>
+                        <td>Supports advanced analysis</td>
+                    </tr>
+                    <tr>
+                        <td>British Antarctic Survey (BAS)</td>
+                        <td>FISS</td>
+                        <td>Ice Thickness</td>
+                        <td>Available</td>
+                        <td>Supports detailed study</td>
+                    </tr>
+                    <tr>
+                        <td>Alfred Wegener Institute (AWI)</td>
+                        <td>Roi Baudouin Ice Shelf</td>
+                        <td>Radar Data</td>
+                        <td>Available</td>
+                        <td>High resolution</td>
+                    </tr>
+                    <tr>
+                        <td>University of Texas Institute for Geophysics (UTIG)</td>
+                        <td>ICECAP</td>
+                        <td>Radar Data</td>
+                        <td>Available</td>
+                        <td>Comprehensive coverage</td>
+                    </tr>
+                    <tr>
+                        <td>Stanford University</td>
+                        <td>SPRI</td>
+                        <td>Ice Thickness</td>
+                        <td>Available</td>
+                        <td>Historical data</td>
+                    </tr>
+                    <tr>
+                        <td>Korea Polar Research Institute (KOPRI)</td>
+                        <td>KRT1</td>
+                        <td>Radar Data</td>
+                        <td>Available</td>
+                        <td>Limited granularity</td>
+                    </tr>
+                    <tr>
+                        <td>Center for Remote Sensing of Ice Sheets (CReSIS)</td>
+                        <td>Various Campaigns</td>
+                        <td>Radar Data</td>
+                        <td>Not Available</td>
+                        <td>Data format conversion needed</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Additional Resources</h2>
+            <p>For more information, please visit the following links:</p>
+            <ul>
+                <li><a href="https://github.com/qiceradar">QIceRadar Repositories</a></li>
+                <li><a href="https://lindzey.github.io/blog/2015/07/27/a-brief-introduction-to-ice-penetrating-radar/">A Brief Introduction to Ice-Penetrating Radar</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; University of Washington - Applied Physics Laboratory 2024</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
