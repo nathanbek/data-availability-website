@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About QIceRadar</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("dark-mode");
+        });
+    </script>
 </head>
 <body>
     <header class="bg-primary text-white py-3">
@@ -43,7 +48,7 @@
             <ul>
                 <li><strong>Data Availability Maps:</strong> Visualizing the geographic areas where data from different institutions is available.</li>
                 <li><strong>Institution-Specific Layers:</strong> Displaying data from each institution separately, highlighting those that contribute openly.</li>
-                <li><strong>Comparative Analysis:</strong> Providing statistics and visual comparisons of data availability between institutions, promoting transparency and encouraging more data sharing.</li>
+                <li><strong>Comparative Analysis:</strong> Providing statistics and visual comparisons of data availability between institutions, promoting transparency and encouraging more data sharing.</p>
             </ul>
             <h2>Long-Term Implications</h2>
             <ul>
@@ -52,29 +57,6 @@
                 <li><strong>Educational Resource:</strong> Serves as a valuable tool for educators and students, promoting data literacy.</li>
                 <li><strong>Encouraging Open Science:</strong> Sets a precedent for open data in other scientific fields.</li>
                 <li><strong>Innovation and Technological Advancement:</strong> Accessible data accelerates innovation and new discoveries.</li>
-            </ul>
-            <h2>Technology Stack Used</h2>
-            <h3>Data Storage and Management:</h3>
-            <ul>
-                <li><strong>GeoPackage, PostgreSQL with PostGIS:</strong> Efficient storage and querying of geospatial data.</li>
-            </ul>
-            <h3>Data Processing:</h3>
-            <ul>
-                <li><strong>Python:</strong> Using Pandas, GeoPandas, and NumPy for data manipulation.</li>
-                <li><strong>GDAL/OGR:</strong> For data conversion and preprocessing.</li>
-            </ul>
-            <h3>Visualization:</h3>
-            <ul>
-                <li><strong>Matplotlib and Plotly:</strong> For static and interactive visualizations.</li>
-                <li><strong>QGIS:</strong> For creating maps and visualizing geospatial data.</li>
-            </ul>
-            <h3>User Interface and Experience:</h3>
-            <ul>
-                <li><strong>HTML, CSS, JavaScript, Bootstrap:</strong> For a responsive and user-friendly interface.</li>
-            </ul>
-            <h3>Version Control and Collaboration:</h3>
-            <ul>
-                <li><strong>Git and GitHub:</strong> For version control and team collaboration.</li>
             </ul>
         </section>
     </main>

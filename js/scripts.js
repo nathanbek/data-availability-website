@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var previewButtons = document.querySelectorAll('.preview-btn');
     var previewModal = document.getElementById('previewModal');
     var csvPreviewContent = document.getElementById('csvPreviewContent');
-    
+
     previewButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             var csvUrl = button.getAttribute('data-csv');
@@ -62,42 +62,69 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error fetching overview CSV:', error));
     }
-});
 
-function convertCSVToHTMLTable(csv, highlightColumn) {
-    const rows = csv.split('\n');
-    let html = '<table class="table table-striped"><thead><tr>';
+    // Dark mode toggle
+    const toggleBtn = document.createElement('button');
+    toggleBtn.classList.add('toggle-btn');
+    toggleBtn.textContent = "🌙"; // Moon icon for dark mode
+    toggleBtn.title = "Toggle Dark Mode";
 
-    // Add headers
-    const headers = parseCSVLine(rows[0]);
-    headers.forEach(header => {
-        html += `<th>${header.trim()}</th>`;
-    });
-    html += '</tr></thead><tbody>';
+    const header = document.querySelector('header .container');
+    header.appendChild(toggleBtn);
 
-    // Add rows
-    for (let i = 1; i < rows.length; i++) {
-        const cells = parseCSVLine(rows[i]);
-        html += '<tr>';
-        cells.forEach((cell, index) => {
-            if (highlightColumn && headers[index].trim() === highlightColumn && parseFloat(cell.trim()) === 0.0) {
-                html += `<td style="background-color: #ffdddd;">${cell.trim()}</td>`;
-            } else {
-                html += `<td>${cell.trim()}</td>`;
-            }
-        });
-        html += '</tr>';
+    // Check the current theme and apply it
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        document.body.classList.add(storedTheme);
+        if (storedTheme === 'dark-mode') {
+            toggleBtn.textContent = "🌞"; // Sun icon for light mode
+        }
     }
-    html += '</tbody></table>';
-    return html;
-}
 
-function parseCSVLine(line) {
-    const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
-    return line.split(regex).map(cell => cell.replace(/(^"|"$)/g, ''));
-}
+    toggleBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
 
-document.addEventListener('DOMContentLoaded', () => {
+        // Update the button text
+        toggleBtn.textContent = isDarkMode ? "🌞" : "🌙";
+
+        // Save the current theme to localStorage
+        localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
+    });
+
+    function convertCSVToHTMLTable(csv, highlightColumn) {
+        const rows = csv.split('\n');
+        let html = '<table class="table table-striped"><thead><tr>';
+
+        // Add headers
+        const headers = parseCSVLine(rows[0]);
+        headers.forEach(header => {
+            html += `<th>${header.trim()}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+
+        // Add rows
+        for (let i = 1; i < rows.length; i++) {
+            const cells = parseCSVLine(rows[i]);
+            html += '<tr>';
+            cells.forEach((cell, index) => {
+                if (highlightColumn && headers[index].trim() === highlightColumn && parseFloat(cell.trim()) === 0.0) {
+                    html += `<td style="background-color: #ffdddd;">${cell.trim()}</td>`;
+                } else {
+                    html += `<td>${cell.trim()}</td>`;
+                }
+            });
+            html += '</tr>';
+        }
+        html += '</tbody></table>';
+        return html;
+    }
+
+    function parseCSVLine(line) {
+        const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
+        return line.split(regex).map(cell => cell.replace(/(^"|"$)/g, ''));
+    }
+
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navbar = document.getElementById('navbar');
 
@@ -106,5 +133,3 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     });
 });
-
-
