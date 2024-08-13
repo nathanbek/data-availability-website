@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("dark-mode");
+        });
+    </script>
 </head>
 <body>
     <header class="bg-primary text-white p-3">
@@ -16,7 +22,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <nav id="navbar">
+            <nav id="navbar" class="navbar">
                 <ul class="nav">
                     <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
                     <li class="nav-item"><a href="maps.html" class="nav-link text-white">Maps</a></li>
@@ -27,20 +33,31 @@
             </nav>
         </div>
     </header>
-    <main class="container my-5">
-        <h1 class="mb-4">Welcome to QIceRadar</h1>
+    <main class="container main-container my-5">
+        <h1 class="greeting mb-4">Welcome to QIceRadar</h1>
         <p class="lead">QIceRadar aims to visualize and provide access to the vast amounts of data collected by various institutions on Antarctic research.</p>
         <p>Explore our platform to find maps, download CSV data, and learn more about our project.</p>
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <h2>Maps</h2>
-                <p>Visualize the coverage of Antarctic research data by various institutions.</p>
-                <a href="maps.html" class="btn btn-primary">Explore Maps</a>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+            <div class="col">
+                <div class="card-custom card-custom-container">
+                    <h2>Maps</h2>
+                    <p>Visualize the coverage of Antarctic research data by various institutions.</p>
+                    <a href="maps.html" class="btn btn-primary">Explore Maps</a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h2>CSV Data</h2>
-                <p>Download detailed CSV files of data statistics from various institutions.</p>
-                <a href="csvs.html" class="btn btn-primary">Download CSV Data</a>
+            <div class="col">
+                <div class="card-custom card-custom-container">
+                    <h2>CSV Data</h2>
+                    <p>Download detailed CSV files of data statistics from various institutions.</p>
+                    <a href="csvs.html" class="btn btn-primary">Download CSV Data</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-custom card-custom-container">
+                    <h2>Getting Started</h2>
+                    <p>Begin using the QIceRadar Plugin.</p>
+                    <a href="instructions.html" class="btn btn-primary">QIceRadar Instructions</a>
+                </div>
             </div>
         </div>
     </main>
