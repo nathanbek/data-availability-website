@@ -1,0 +1,40 @@
+name: Update Maps Daily
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs daily at 2 AM UTC
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  update-maps:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install geopandas matplotlib fiona shapely pandas
+
+    - name: Download GeoPackage
+      run: |
+        curl -L -o antarctic_index.gpkg "URL_TO_GEO_PACKAGE_FILE"
+
+    - name: Run generate_maps.py
+      run: |
+        python3 scripts/generate_maps.py antarctic_index.gpkg /path/to/map_shapefile.shp scripts/data1
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "nathanbek@outlook.com"
+        git config --local user.name "Nathanbek"
+        git add .
+        git commit -m "Auto-update maps"
+        git push origin gh-pages
