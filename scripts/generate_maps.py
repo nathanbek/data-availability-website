@@ -140,7 +140,7 @@ def plot_data_on_basemap(basemap, gdf, institution, filename, output_folder):
     plt.close(fig)
     print(f"Saved map for {institution} to {output_path}")
 
-def main(input_file_path, map_path, output_folder):
+def main(input_file_path, map_path, output_folder="maps"):
     # Ensure the output folders exist
     os.makedirs(output_folder, exist_ok=True)
 
