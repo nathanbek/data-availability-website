@@ -63,35 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching overview CSV:', error));
     }
 
-    // Dark mode toggle
-    const toggleBtn = document.createElement('button');
-    toggleBtn.classList.add('toggle-btn');
-    toggleBtn.textContent = "🌙"; // Moon icon for dark mode
-    toggleBtn.title = "Toggle Dark Mode";
-
-    const header = document.querySelector('header .container');
-    header.appendChild(toggleBtn);
-
-    // Check the current theme and apply it
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-        document.body.classList.add(storedTheme);
-        if (storedTheme === 'dark-mode') {
-            toggleBtn.textContent = "🌞"; // Sun icon for light mode
-        }
-    }
-
-    toggleBtn.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-
-        // Update the button text
-        toggleBtn.textContent = isDarkMode ? "🌞" : "🌙";
-
-        // Save the current theme to localStorage
-        localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
-    });
-
     function convertCSVToHTMLTable(csv, highlightColumn) {
         const rows = csv.split('\n');
         let html = '<table class="table table-striped"><thead><tr>';

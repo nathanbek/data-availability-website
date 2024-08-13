@@ -8,7 +8,7 @@ body {
 
 /* Header and Footer Styles */
 header, footer {
-    background-color: #2c3e50;
+    background-color: #1a3c6d; /* Darker shade of blue */
     color: #ecf0f1;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ header h1 {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    color: #f8d54a;
+    color: #fff2c3; /* Changed to white */
     position: relative;
     z-index: 2;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
@@ -50,7 +50,7 @@ header h1 {
 footer {
     text-align: center;
     padding: 0.5rem;
-    background: linear-gradient(90deg, #34495e, #2c3e50);
+    background-color: #1a3c6d !important;/* Darker shade of blue */
     position: relative;
     bottom: 0;
     width: 100%;
@@ -88,13 +88,13 @@ header nav ul li a {
     font-weight: bold;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    background: linear-gradient(45deg, #2980b9, #3498db);
+    background: #355f99; /* Darker blue */
     border-radius: 8px;
 }
 
 header nav ul li a:hover {
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: #f1c40f !important;
+    background: #1a3c6d; /* Darker shade of blue */
+    color: #ffda83 !important; /* Changed to white */
     transform: scale(1.1);
 }
 
@@ -102,27 +102,10 @@ header nav ul li a:hover {
 .greeting {
     font-size: 5rem;
     font-weight: 700;
-    background: linear-gradient(45deg, #21648f, #23ddf1, #265f82);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: shiny 3s linear infinite;
     text-align: center;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes shiny {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 /* Main Container Styles */
@@ -133,7 +116,7 @@ header nav ul li a:hover {
 
 /* Heading Styles */
 h1 {
-    color: #2980b9;
+    color: #1a3c6d; /* Darker shade of blue */
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -141,15 +124,23 @@ h1 {
 }
 
 h2 {
-    color: #2980b9;
+    color: #000000; /* Darker shade of blue */
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+.about h2 {
+    color: #1a3c6d; /* Darker shade of blue */
+    font-size: 1.75rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 a {
-    color: #3498db;
+    color: #1a3c6d; /* Darker shade of blue */
 }
 
 a:hover {
@@ -160,13 +151,14 @@ a:hover {
 .card {
     border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced light shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
     background-color: #fff;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
 }
 
 .card-body {
@@ -177,14 +169,14 @@ a:hover {
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced light shadow */
     margin-bottom: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-custom.card-custom-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
 }
 
 /* Button Styles */
@@ -193,22 +185,22 @@ a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    background: linear-gradient(45deg, #2980b9, #3498db);
+    background: #1a3c6d; /* Darker shade of blue */
     color: #fff;
     font-weight: bold;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(45deg, #1c598a, #2c7cba);
+    background: #274b7e; /* Darker blue */
     transform: scale(1.05);
 }
 
 .btn-secondary {
-    background: linear-gradient(45deg, #3498db, #5dade2);
+    background: #274b7e; /* Darker blue */
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(45deg, #2c7cba, #4ba3db);
+    background: #1a3c6d; /* Darker shade of blue */
     transform: scale(1.05);
 }
 
@@ -236,7 +228,7 @@ a:hover {
 
 .modal-header {
     border-bottom: none;
-    background-color: #2980b9;
+    background-color: #1a3c6d; /* Darker shade of blue */
     color: #fff;
 }
 
@@ -250,7 +242,7 @@ a:hover {
 }
 
 .close:hover, .close:focus {
-    color: #f1c40f;
+    color: #1a3c6d; /* Darker shade of blue */
 }
 
 /* Container Row Styles */
@@ -369,7 +361,7 @@ a:hover {
 .hamburger .bar {
     width: 2rem;
     height: 0.25rem;
-    background-color: #ecf0f1;
+    background-color: #153f58;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -436,7 +428,6 @@ a:hover {
     #navbar.active {
         display: flex;
     }
-
 }
 
 @media (min-width: 769px) {
@@ -455,7 +446,7 @@ a:hover {
     }
 }
 
-/* Position the toggle button consistently in both modes */
+/* Position the toggle button consistently */
 .toggle-btn {
     position: absolute;
     top: 10px;
@@ -468,140 +459,55 @@ a:hover {
     z-index: 10;
 }
 
-/* Style the greeting consistently in both modes */
-.greeting.mb-4 {
-    background: linear-gradient(45deg, #21648f, #23ddf1, #265f82);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: shiny 3s linear infinite;
-}
-
-
-@keyframes shiny {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #151b22;
-    color: #ecf0f1;
-}
-body.dark-mode .mb-4 {
-    color: rgb(255, 255, 255);
-}
-
-body.dark-mode header,
-body.dark-mode footer {
-    background-color: #1a252f;
-}
-
-body.dark-mode a {
-    color: #3498db;
-}
-
-body.dark-mode .modal-content {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-body.dark-mode .card-custom.card-custom-container {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-body.dark-mode .btn-primary,
-body.dark-mode .btn-secondary {
-    background: linear-gradient(45deg, #2980b9, #3498db);
-}
-
-body.dark-mode .btn-primary:hover,
-body.dark-mode .btn-secondary:hover {
-    background: linear-gradient(45deg, #194f73, #174361);
-    color: #f1c40f;
-}
-
-body.dark-mode .btn-primary {
-    color: #fff;
-}
-
-body.dark-mode .modal-header {
-    background-color: #2980b9;
-}
-
-/* Override for the content section in dark mode */
-body.dark-mode .content p,
-body.dark-mode .content li {
-    color: #000 !important;
-}
-
-body.dark-mode .greeting.mb-4 {
-    background: linear-gradient(45deg, #cbdef9, #71c6ff, #cae1fd, #77b5dc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: shiny 3s linear infinite;
-}
-
-@keyframes shiny {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-body.dark-mode .about p,
-body.dark-mode .about li {
-    color: #000 !important;
-}
-
-/* Mobile Responsive Styles for Dark Mode */
-@media (max-width: 768px) {
-    body.dark-mode header h1 {
-        font-size: 1.75rem;
-    }
-
-    body.dark-mode header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    body.dark-mode header nav ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    body.dark-mode .container .row {
-        margin-bottom: 1rem;
-    }
-
-    body.dark-mode .card {
-        margin-bottom: 1rem;
-    }
-
-    body.dark-mode h1 {
-        font-size: 2rem;
-    }
-
-    body.dark-mode h2 {
-        font-size: 1.5rem;
-    }
-}
-
 /* Enhanced Card Hover Effect */
 .card-custom.card-custom-container:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* About Page Styles */
+.about-section {
+    background-color: #f5f7fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.about-section h2 {
+    color: #1a3c6d; /* Darker shade of blue */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-section a {
+    color: #1a3c6d; /* Darker shade of blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: #274b7e; /* Darker blue */
+    text-decoration: underline;
+}
+
+.about-section .btn {
+    background-color: #1a3c6d; /* Darker shade of blue */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-section .btn:hover {
+    background-color: #274b7e; /* Darker blue */
+    transform: scale(1.05);
 }
